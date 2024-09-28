@@ -19,6 +19,7 @@ public class MovieController {
 
     @GetMapping
     public ResponseEntity<List<Movie>> getMovies() {
+        System.out.println("Inside the controller function");
         return new ResponseEntity<List<Movie>>(movieService.allMovie(), HttpStatus.OK);
     }
 
